@@ -21,6 +21,10 @@
   }
 }
 
+.poppins{
+  font-family: var(--font-poppins);
+}
+
 body {
   font-family: var(--font-roboto);
 }

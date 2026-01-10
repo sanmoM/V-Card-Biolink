@@ -1,15 +1,18 @@
-import PrimaryButton from "@/components/buttons/primary-button";
-import SocialButton from "@/components/buttons/social-button";
-import TextInput from "@/components/inputs/text-input";
+"use client";
+
+import PrimaryButton from "@/components/ui/buttons/primary-button";
+import SocialButton from "@/components/ui/buttons/social-button";
+import TextInput from "@/components/ui/inputs/text-input";
 import SectionHeading from "@/components/section-heading";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import BlueCircle from "../../components/background-images/blue-circle";
-import YellowCircle from "../../components/background-images/yellow-circle";
+import BlueCircle from "../../components/ui/background-images/blue-circle";
+import YellowCircle from "../../components/ui/background-images/yellow-circle";
 import Link from "next/link";
+import Checkbox from "@/components/ui/inputs/checkbox";
 
 export default function CreateAccountCard() {
     return (
-        <div className="relative rounded-2xl p-0.5 bg-gradient-primary shadow-glow py-20 2xl:h-screen flex justify-center items-center w-full overflow-hidden">
+        <div className="relative  poppins rounded-2xl p-0.5 bg-gradient-primary shadow-glow py-20 2xl:h-screen flex justify-center items-center w-full overflow-hidden">
             <div className="
   w-[90%] sm:w-[23%]
   sm:min-w-[400px]
@@ -33,7 +36,7 @@ export default function CreateAccountCard() {
                 </p>
 
                 {/* Form */}
-                <form className="mt-6 space-y-6">
+                <form className="mt-6 space-y-6 relative z-20">
                     <TextInput label="Full Name" placeholder="Enter your full name" />
                     <TextInput label="Email Address" placeholder="Enter your email" />
                     <TextInput label="Password" placeholder="Create a password" type="password" />
@@ -41,7 +44,8 @@ export default function CreateAccountCard() {
 
                     {/* Terms */}
                     <div className="flex items-start gap-2 text-sm text-gray-400">
-                        <input type="checkbox" className="mt-1 accent-yellow-400 bg-black" />
+                        <Checkbox checked={false} onChange={() => { }} />
+
                         <p>
                             I agree to the{" "}
                             <span className="text-yellow-400 cursor-pointer">Terms of Service</span>{" "}
