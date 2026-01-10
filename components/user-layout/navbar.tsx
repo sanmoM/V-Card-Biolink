@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Logo from "../shared/logo";
+import Link from "next/link";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -23,12 +24,12 @@ export default function Navbar() {
 
                 {/* Desktop Actions */}
                 <div className="hidden md:flex items-center gap-6">
-                    <button className="text-sm text-gray-300 hover:text-white">
+                    <Link href={"/signin"} className=" text-gray-300 hover:text-white">
                         Login
-                    </button>
-                    <button className="px-5 py-2 rounded-lg bg-yellow-400 text-black text-sm font-semibold hover:opacity-90 transition">
+                    </Link>
+                    <Link href={"/signup"} className="px-5 py-2 rounded-lg bg-yellow-400 text-black font-semibold hover:opacity-90 transition">
                         Sign Up
-                    </button>
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -54,12 +55,12 @@ export default function Navbar() {
                         <li className="hover:text-white">FAQ</li>
 
                         <div className="pt-4 border-t border-gray-800 flex flex-col gap-3">
-                            <button className="text-left text-gray-300 hover:text-white">
+                            <Link href={"/signin"} className="text-left text-gray-300 hover:text-white">
                                 Login
-                            </button>
-                            <button className="w-full py-2 rounded-lg bg-yellow-400 text-black font-semibold">
+                            </Link>
+                            <Link href={"/signup"} className="w-full py-2 rounded-lg bg-yellow-400 text-black font-semibold">
                                 Sign Up
-                            </button>
+                            </Link>
                         </div>
                     </ul>
                 </div>
