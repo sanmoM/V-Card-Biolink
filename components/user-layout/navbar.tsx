@@ -9,7 +9,7 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="w-full bg-black text-white">
+        <nav className="w-full bg-black text-white px-4 md:px-6 lg:px-0 lg:w-[95%] max-w-[1600px] mx-auto">
             <div className="py-3 flex items-center justify-between">
 
                 {/* Logo */}
@@ -60,7 +60,7 @@ export default function Navbar() {
                                 Login
                             </Link>
                             <SecondaryButton>
-                                <Link href={"/signup"} className="w-full py-2 rounded-lg bg-yellow-400 text-black font-semibold">
+                                <Link href={"/signup"} className="w-full rounded-lg bg-yellow-400 text-black font-semibold">
                                     Sign Up
                                 </Link>
                             </SecondaryButton>

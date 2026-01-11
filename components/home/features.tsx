@@ -7,46 +7,49 @@ import BlueCircle from "../ui/background-images/blue-circle";
 import Badge from "../ui/badge";
 import MultiTextHeading from "../shared/multi-text-heading";
 import SubHeading from "../shared/sub-heading";
+import Container from "../shared/container";
 
 export default function Features() {
     return (
-        <section className="px-4 py-16"
+        <div className="py-16"
             style={{
                 backgroundImage: "linear-gradient(0deg, #000000 0%, #111827 50%, #000000 100%)"
             }}
         >
-            {/* Header */}
-            <div className="mx-auto mb-20 max-w-2xl text-center  relative z-[1]">
-                <BlueCircle className="absolute top-1/2  -translate-y-[50%] -left-[30%] z-20 mix-blend-exclusion w-full" />
-                <Badge>Features</Badge>
-                <MultiTextHeading text1="Powerful" text2="Features" text2Style={{
-                    backgroundImage: "linear-gradient(90deg, #FFD700 0%, #0080FF 100%)"
-                }} />
-                <SubHeading>Everything you need to create, customize, and optimize your biolink presence</SubHeading>
-            </div>
+            <Container>
+                {/* Header */}
+                <div className="mx-auto mb-6 md:mb-10 xl:mb-16 2xl:mb-20 max-w-2xl text-center  relative z-[1]">
+                    <BlueCircle className="absolute top-1/2  -translate-y-[50%] -left-[30%] z-20 mix-blend-exclusion w-full" />
+                    <Badge>Features</Badge>
+                    <MultiTextHeading text1="Powerful" text2="Features" text2Style={{
+                        backgroundImage: "linear-gradient(90deg, #FFD700 0%, #0080FF 100%)"
+                    }} />
+                    <SubHeading>Everything you need to create, customize, and optimize your biolink presence</SubHeading>
+                </div>
 
-            {/* Grid */}
-            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {features.map((feature, index) => (
-                    <div
-                        key={index}
-                        className={cn("rounded-xl p-8", feature.containerClassName)}
-                    >
-                        <div className={cn("mb-5 flex h-14 w-14  backdrop-blur-3xl  items-center justify-center rounded-lg text-yellow-400", feature.iconClassName)}>
-                            <feature.icon size={28} />
+                {/* Grid */}
+                <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {features.map((feature, index) => (
+                        <div
+                            key={index}
+                            className={cn("rounded-xl p-8", feature.containerClassName)}
+                        >
+                            <div className={cn("mb-5 flex h-14 w-14  backdrop-blur-3xl  items-center justify-center rounded-lg text-yellow-400", feature.iconClassName)}>
+                                <feature.icon size={28} />
+                            </div>
+
+                            <h3 className="mb-2 text-2xl font-semibold text-white">
+                                {feature.title}
+                            </h3>
+
+                            <p className="text-sm leading-relaxed text-gray-400">
+                                {feature.description}
+                            </p>
                         </div>
-
-                        <h3 className="mb-2 text-2xl font-semibold text-white">
-                            {feature.title}
-                        </h3>
-
-                        <p className="text-sm leading-relaxed text-gray-400">
-                            {feature.description}
-                        </p>
-                    </div>
-                ))}
-            </div>
-        </section>
+                    ))}
+                </div>
+            </Container>
+        </div>
     );
 }
 

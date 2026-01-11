@@ -5,6 +5,7 @@ import { HiPlus, HiMinus } from "react-icons/hi2";
 import SectionHeading from "../shared/section-heading";
 import SubHeading from "../shared/sub-heading";
 import SecondaryButton from "../ui/buttons/secondary-button";
+import Container from "../shared/container";
 
 type FaqItem = {
     question: string;
@@ -62,68 +63,67 @@ export default function FAQ() {
     };
 
     return (
-        <section className="px-4 py-20"
+        <section className="md:py-10 xl:py-20"
             style={{
                 backgroundImage: "linear-gradient(0deg, #000000 0%, #111827 50%, #000000 100%)"
             }}
         >
-            {/* Header */}
-            <div className="mx-auto mb-12 max-w-3xl text-center">
-                <SectionHeading className="mb-6 text-5xl">
-                    Frequently Asked Questions
-                </SectionHeading>
-                <SubHeading>Everything you need to know about our platform and services</SubHeading>
-            </div>
+            <Container>
+                {/* Header */}
+                <div className="mx-auto mb-6 md:mb-8 xl:mb-12 max-w-3xl text-center">
+                    <SectionHeading className="mb-4 xl:mb-6 text-3xl md:text-5xl">
+                        Frequently Asked Questions
+                    </SectionHeading>
+                    <SubHeading>Everything you need to know about our platform and services</SubHeading>
+                </div>
 
-            {/* FAQ List */}
-            <div className="mx-auto max-w-3xl space-y-4">
-                {faqs.map((faq, index) => {
-                    const isOpen = openIndex === index;
+                {/* FAQ List */}
+                <div className="mx-auto max-w-3xl space-y-4">
+                    {faqs.map((faq, index) => {
+                        const isOpen = openIndex === index;
 
-                    return (
-                        <div
-                            key={index}
-                            className="rounded-xl border border-white/10 bg-white/5"
-                        >
-                            <button
-                                onClick={() => toggle(index)}
-                                className="flex w-full items-center justify-between px-6 py-5 text-left  cursor-pointer"
-                            >
-                                <span className="text-lg font-medium text-white">
-                                    {faq.question}
-                                </span>
-
-                                <span className="text-yellow-400">
-                                    {isOpen ? <HiMinus size={18} /> : <HiPlus size={18} />}
-                                </span>
-                            </button>
-
+                        return (
                             <div
-                                className={`grid overflow-hidden px-6 transition-all duration-300 ${isOpen ? "grid-rows-[1fr] pb-5" : "grid-rows-[0fr]"
-                                    }`}
+                                key={index}
+                                className="rounded-xl border border-white/10 bg-white/5"
                             >
-                                <div className="overflow-hidden text-gray-400">
-                                    {faq.answer}
+                                <button
+                                    onClick={() => toggle(index)}
+                                    className="flex w-full items-center justify-between px-6 py-5 text-left  cursor-pointer"
+                                >
+                                    <span className="text-sm md:text-lg font-medium text-white">
+                                        {faq.question}
+                                    </span>
+
+                                    <span className="text-yellow-400">
+                                        {isOpen ? <HiMinus size={18} /> : <HiPlus size={18} />}
+                                    </span>
+                                </button>
+
+                                <div
+                                    className={`grid overflow-hidden px-6 transition-all duration-300 ${isOpen ? "grid-rows-[1fr] pb-5" : "grid-rows-[0fr]"
+                                        }`}
+                                >
+                                    <div className="overflow-hidden text-gray-400">
+                                        {faq.answer}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    );
-                })}
-            </div>
+                        );
+                    })}
+                </div>
 
-            {/* CTA */}
-            <div className="mt-14 text-center">
-                <p className="mb-4 text-gray-400">
-                    Still have questions?
-                </p>
-                {/* <button className="inline-flex items-center gap-2 rounded-lg bg-yellow-400 px-6 py-3 text-sm font-semibold text-black hover:opacity-90">
-                    
-                </button> */}
-                <SecondaryButton>
-                    Contact Us
-                    <span>→</span>
-                </SecondaryButton>
-            </div>
+                {/* CTA */}
+                <div className="mt-6 md:mt-10 xl:mt-14 text-center">
+                    <p className="mb-4 text-gray-400 text-sm md:text-base">
+                        Still have questions?
+                    </p>
+                    <SecondaryButton>
+                        Contact Us
+                        <span>→</span>
+                    </SecondaryButton>
+                </div>
+            </Container>
         </section>
     );
 }

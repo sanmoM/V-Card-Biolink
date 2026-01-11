@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function SubHeading({ children, className }: { children: React.ReactNode, className?: string }) {
     return (
-        <p className={cn("text-lg leading-relaxed text-gray-300", className)}>
+        <p className={cn("text-sm md:text-base xl:text-lg leading-relaxed text-gray-300", className)}>
             {children}
         </p>
     )

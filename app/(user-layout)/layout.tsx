@@ -1,14 +1,15 @@
-import Container from '@/components/shared/container'
+import Footer from '@/components/user-layout/footer'
 import Navbar from '@/components/user-layout/navbar'
 import React from 'react'
 
 export default function layout({ children }: { children: React.ReactNode }) {
     return (
         <>
-            <Container>
+            <div className="sticky top-0 z-[100] bg-black">
                 <Navbar />
-            </Container>
+            </div>
             {children}
+            <Footer />
         </>
     )
 }

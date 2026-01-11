@@ -7,7 +7,7 @@ import SubHeading from '../shared/sub-heading';
 
 export default function Hero() {
     return (
-        <section className="h-[calc(100vh-89px)] text-white flex items-center justify-center px-6 relative z-[1] bg-transparent w-full"
+        <section className="xl:h-[calc(100vh-89px)] text-white flex items-center justify-center px-6 relative z-[1] bg-transparent w-full py-10 xl:py-0"
             style={{
                 backgroundImage: "linear-gradient(135deg, #111827 0%, #000000 50%, #111827 100%)"
             }}
@@ -15,13 +15,13 @@ export default function Hero() {
             <div className="max-w-4xl w-full text-center bg-transparent">
 
                 {/* Logo */}
-                <Logo className="w-20 sm:w-32 2xl:w-38 mx-auto mb-16" />
+                <Logo className="w-20 lg:w-28 2xl:w-38 mx-auto" />
 
                 <SectionHeading
                     style={{
                         backgroundImage: "linear-gradient(90deg, #FFD700 40%, #FFFFFF 50%, #0080FF 60%)"
                     }}
-                    className='text-transparent text-7xl 2xl:text-8xl mb-16'
+                    className='text-transparent text-6xl xl:text-8xl my-4 xl:my-10'
                 >
                     MADWESS
                 </SectionHeading>
@@ -33,28 +33,28 @@ export default function Hero() {
                     Meets{" "}
                     <span className="text-primary font-semibold">Excellence</span>
                 </p>
-                <SubHeading className='mt-10 w-[70%] mx-auto'>Transform your digital presence with cutting-edge solutions powered by next-generation technology</SubHeading>
+                <SubHeading className='my-4 xl:my-8 2xl:my-10 md:w-[70%] mx-auto'>Transform your digital presence with cutting-edge solutions powered by next-generation technology</SubHeading>
 
                 {/* CTA Buttons */}
-                <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                    <button className="cursor-pointer px-8 py-3 rounded-full bg-yellow-400 text-black font-semibold hover:opacity-90 transition">
+                <div className="xl:mt-6 2xl:mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                    <button className="cursor-pointer px-8 py-2 xl:py-3 rounded-full bg-yellow-400 text-black font-semibold hover:opacity-90 transition">
                         Explore Products
                     </button>
-                    <button className="cursor-pointer px-8 py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-black transition">
+                    <button className="cursor-pointer px-8 py-2 xl:py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-black transition">
                         Get Started
                     </button>
                 </div>
 
                 {/* Stats */}
-                <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div className="mt-8 xl:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <StatCard value="500+" label="Happy Clients" color="yellow" />
                     <StatCard value="98%" label="Satisfaction Rate" color="blue" />
                     <StatCard value="24/7" label="Support Available" color="yellow" />
                 </div>
                 <CgMouse className='text-secondary text-4xl block mx-auto mt-8' />
             </div>
-            <YellowCircle className='z-20 top-[0%] left-[45%] -translate-x-[50%] w-[35%]' />
-            <BlueCircle className='z-20 bottom-[8%] right-[45%] translate-x-[50%] w-[35%]' />
+            <YellowCircle className='z-20 top-[0%] xl:top-[0%] left-[45%] xl:left-[45%] -translate-x-[50%] w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[35%]' />
+            <BlueCircle className='z-20 top-0 md:bottom-[28%] xl:bottom-[15%] right-[20%] xl:right-[40%] 2xl:right-[45%] xl:translate-x-[50%] w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[35%]' />
         </section>
     );
 }

@@ -8,6 +8,7 @@ import MultiTextHeading from "../shared/multi-text-heading";
 import SubHeading from "../shared/sub-heading";
 import YellowCircle from "../ui/background-images/yellow-circle";
 import Badge from "../ui/badge";
+import Container from "../shared/container";
 
 type Testimonial = {
     quote: string;
@@ -56,10 +57,10 @@ export default function Testimonials(): JSX.Element {
     };
 
     return (
-        <section className="px-4 py-20 relative">
+        <Container className="py-20 relative">
             <YellowCircle className="absolute top-[60%] -translate-y-[50%] left-1/2 -translate-x-[50%] z-[-1] blur-[100px] w-[40%]" />
             {/* Header */}
-            <div className="mx-auto mb-14 max-w-3xl text-center">
+            <div className="mx-auto mb-4 md:mb-8 xl:mb-14 max-w-3xl text-center">
                 <Badge>Testimonials</Badge>
                 <MultiTextHeading text1="What Our" text2="Clients Says" text2Style={{
                     backgroundImage: "linear-gradient(90deg, #FFD700 0%, #0080FF 100%)"
@@ -82,12 +83,12 @@ export default function Testimonials(): JSX.Element {
                     {testimonials.map((item, index) => (
                         <div
                             key={index}
-                            className="w-full flex-shrink-0 rounded-2xl border border-yellow-400/30 p-10 shadow-[0_0_40px_0_#FFD70026] bg-blend-overlay"
+                            className="w-full flex-shrink-0 rounded-2xl border border-yellow-400/30 p-6 xl:p-10 shadow-[0_0_40px_0_#FFD70026] bg-blend-overlay"
                             style={{
                                 backgroundImage: "linear-gradient(135deg, rgba(31, 41, 55, 0.6) 0%, rgba(17, 24, 39, 0.6) 100%)"
                             }}
                         >
-                            <p className="mb-6 text-xl leading-relaxed text-gray-200 relative">
+                            <p className="mb-6 md:text-lg xl:text-xl leading-relaxed text-gray-200 relative">
                                 <Image
                                     src={"/images/quote.png"}
                                     alt="Quote"
@@ -127,7 +128,7 @@ export default function Testimonials(): JSX.Element {
             </div>
 
             {/* Navigation */}
-            <div className="mt-10 flex items-center justify-center gap-6">
+            <div className="mt-4 md:mt-6 xl:mt-10 flex items-center justify-center gap-6">
                 <button
                     onClick={prevSlide}
                     className="flex h-10 w-10 items-center justify-center rounded-full border border-yellow-400/40 text-yellow-400 hover:bg-yellow-400/10"
@@ -156,6 +157,6 @@ export default function Testimonials(): JSX.Element {
                     <HiArrowSmallLeft size={18} className="rotate-180" />
                 </button>
             </div>
-        </section>
+        </Container>
     );
 }
