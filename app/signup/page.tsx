@@ -3,7 +3,7 @@
 import PrimaryButton from "@/components/ui/buttons/primary-button";
 import SocialButton from "@/components/ui/buttons/social-button";
 import TextInput from "@/components/ui/inputs/text-input";
-import SectionHeading from "@/components/section-heading";
+import SectionHeading from "@/components/shared/section-heading";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import BlueCircle from "../../components/ui/background-images/blue-circle";
 import YellowCircle from "../../components/ui/background-images/yellow-circle";

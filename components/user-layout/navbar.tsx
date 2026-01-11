@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Logo from "../shared/logo";
 import Link from "next/link";
+import SecondaryButton from "../ui/buttons/secondary-button";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -58,9 +59,11 @@ export default function Navbar() {
                             <Link href={"/signin"} className="text-left text-gray-300 hover:text-white">
                                 Login
                             </Link>
-                            <Link href={"/signup"} className="w-full py-2 rounded-lg bg-yellow-400 text-black font-semibold">
-                                Sign Up
-                            </Link>
+                            <SecondaryButton>
+                                <Link href={"/signup"} className="w-full py-2 rounded-lg bg-yellow-400 text-black font-semibold">
+                                    Sign Up
+                                </Link>
+                            </SecondaryButton>
                         </div>
                     </ul>
                 </div>
