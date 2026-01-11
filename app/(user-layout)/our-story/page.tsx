@@ -16,9 +16,9 @@ import {
 
 export default function OurStoryPage(): JSX.Element {
     return (
-        <section className="px-4 py-24">
+        <section className="px-4 py-6 md:py-10 xl:py-24">
             {/* Header */}
-            <div className="mx-auto mb-16 max-w-3xl text-center">
+            <div className="mx-auto mb-8 md:mb-10 xl:mb-16 max-w-3xl text-center">
                 <MultiTextHeading text1="Our" text2="Story" text2Style={{
                     backgroundImage: "linear-gradient(90deg, #FFD700 0%, #0080FF 100%)"
                 }} />
@@ -31,7 +31,7 @@ export default function OurStoryPage(): JSX.Element {
                 <BlueCircle className="absolute bottom-[0] translate-y-[50%] right-0 translate-x-[50%] opacity-[0.7]" />
                 {/* Card 1 */}
                 <StoryCard
-                    icon={<HiHeart />}
+                    icon={<HiHeart size={24} />}
                     title="The Burden of the Hustle"
                     accent="yellow"
                 >
@@ -56,7 +56,7 @@ export default function OurStoryPage(): JSX.Element {
 
                 {/* Card 2 */}
                 <StoryCard
-                    icon={<HiLightBulb />}
+                    icon={<HiLightBulb size={24} />}
                     title="Our Vision: Automation and Abundance"
                     accent="blue"
                 >
@@ -77,17 +77,17 @@ export default function OurStoryPage(): JSX.Element {
 
                     <div className="mt-6 space-y-4">
                         <Feature
-                            icon={<HiSparkles />}
+                            icon={<HiSparkles size={24} />}
                             title="Faceless Content Creation"
                             description="Generate high-quality, engaging content without requiring your constant personal presence."
                         />
                         <Feature
-                            icon={<HiUsers />}
+                            icon={<HiUsers size={24} />}
                             title="Custom Income Streams"
                             description="Integrating TikTok monetization, affiliate programs, and tailored revenue avenues."
                         />
                         <Feature
-                            icon={<HiHeart />}
+                            icon={<HiHeart size={24} />}
                             title="Financial Freedom"
                             description="A baseline income already working for you, freeing you to live your life."
                         />
@@ -96,7 +96,7 @@ export default function OurStoryPage(): JSX.Element {
 
                 {/* Card 3 */}
                 <StoryCard
-                    icon={<HiGlobeAlt />}
+                    icon={<HiGlobeAlt size={24} />}
                     title="Global Inclusion: Removing the Barriers"
                     accent="yellow"
                 >
@@ -117,7 +117,7 @@ export default function OurStoryPage(): JSX.Element {
 
                 {/* Card 4 */}
                 <StoryCard
-                    icon={<HiUsers />}
+                    icon={<HiUsers size={24} />}
                     title="The Ultimate Angle: Community and Ownership"
                     accent="blue"
                 >
@@ -137,14 +137,12 @@ export default function OurStoryPage(): JSX.Element {
                 </StoryCard>
 
                 {/* Closing Card */}
-                <div className="rounded-2xl space-y-6 border border-yellow-400/30 p-8 text-center shadow-[0_0_40px_0_#FFD70026]">
-                    {/* <h3 className="mb-3 text-2xl font-bold text-yellow-400">
-                        Welcome to Madwess
-                    </h3> */}
+                <div className="rounded-2xl space-y-6 border border-yellow-400/30 p-4 lg:p-8 text-center shadow-[0_0_40px_0_#FFD70026]"> size={24}
                     <SectionHeading
                         style={{
                             backgroundImage: "linear-gradient(90deg, #FACC15 30%, #3B82F6 70%)"
                         }}
+                        className="text-3xl md:text-xl"
                     >
                         Welcome to Madwess
                     </SectionHeading>
@@ -171,21 +169,27 @@ function StoryCard({
 }) {
     const accentStyles =
         accent === "yellow"
-            ? "border-yellow-400/30 shadow-[0_0_40px_0_#FFD70026] text-yellow-400"
-            : "border-sky-400/30 shadow-[0_0_40px_0_#38BDF826] text-sky-400";
+            ? "border-yellow-400/30 shadow-[0_0_40px_0_#FFD70026]"
+            : "border-sky-400/30 shadow-[0_0_40px_0_#38BDF826]";
+
+    const styles = {
+        backgroundImage: accent === "yellow" ? "linear-gradient(135deg, #FACC15 0%, #3B82F6 100%)" : "linear-gradient(135deg, #3B82F6 0%, #FACC15 100%)",
+    };
 
     return (
-        <div className={`rounded-2xl border p-8 ${accentStyles}`}>
+        <div className={`rounded-2xl border p-6 lg:p-8 ${accentStyles}`}>
             <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-current">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-current"
+                    style={styles}
+                >
                     {icon}
                 </div>
-                <h2 className="text-lg font-semibold text-white">
+                <h2 className="text-lg md:text-xl xl:text-2xl font-semibold text-white">
                     {title}
                 </h2>
             </div>
 
-            <div className="space-y-4 text-sm leading-relaxed text-gray-300">
+            <div className="space-y-4 text-lg leading-relaxed text-gray-300">
                 {children}
             </div>
         </div>

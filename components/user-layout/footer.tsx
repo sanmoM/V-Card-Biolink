@@ -16,7 +16,7 @@ export default function Footer(): JSX.Element {
         <footer className="px-4 pt-20">
             <Container>
                 {/* Top Footer */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-[20%_67%] gap-20 lg:gap-0 justify-between text-center md:text-left">
+                <div className="grid md:grid-cols-2 lg:grid-cols-[20%_67%] gap-10 md:gap-20 lg:gap-0 justify-between text-center md:text-left">
                     {/* Brand */}
                     <div className="mx-auto md:mx-0">
                         <Logo className="w-20 mx-auto md:mx-0" />
@@ -70,7 +70,7 @@ export default function Footer(): JSX.Element {
                     </div>
 
                     {/* Quick Links */}
-                    <div className="grid md:col-span-2 lg:col-span-1 md:grid-cols-2 lg:grid-cols-3 gap-20 lg:gap-0">
+                    <div className="grid md:col-span-2 lg:col-span-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-20 lg:gap-0">
                         <FooterColumn title="Quick Links">
                             <FooterLink>Our Story</FooterLink>
                             <FooterLink>Plans</FooterLink>
@@ -111,7 +111,7 @@ export default function Footer(): JSX.Element {
                 </div>
 
                 {/* Divider */}
-                <div className="my-12 border-t border-white/10" />
+                <div className="my-6 lg:my-12 border-t border-white/10" />
 
                 {/* Bottom Footer */}
                 <div className="flex flex-col items-center gap-4 pb-6 text-center text-sm text-gray-400 md:flex-row md:justify-between md:text-left">
