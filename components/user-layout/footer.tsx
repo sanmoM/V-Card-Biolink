@@ -50,7 +50,7 @@ export default function Footer(): JSX.Element {
                     </div>
 
                     <div className="mx-auto w-full max-w-sm md:max-w-none lg:hidden">
-                        <h4 className="mb-4 text-lg font-semibold text-yellow-400">
+                        <h4 className="mb-4 text-lg font-semibold text-secondary">
                             Newsletter
                         </h4>
 
@@ -61,16 +61,16 @@ export default function Footer(): JSX.Element {
                         <input
                             type="email"
                             placeholder="Your email"
-                            className="mb-3 w-full rounded-lg border border-white/10 bg-transparent px-4 py-3 text-sm text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none"
+                            className="mb-3 w-full rounded-lg border border-white/10 bg-transparent px-4 py-3 text-sm text-white placeholder-gray-500 focus:border-secondary focus:outline-none"
                         />
 
-                        <button className="w-full rounded-lg bg-gradient-to-r from-yellow-400 to-sky-500 py-3 text-sm font-semibold text-black hover:opacity-90">
+                        <button className="w-full rounded-lg bg-gradient-to-r from-secondary to-sky-500 py-3 text-sm font-semibold text-black hover:opacity-90">
                             Subscribe
                         </button>
                     </div>
 
                     {/* Quick Links */}
-                    <div className="grid md:col-span-2 lg:col-span-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-20 lg:gap-0">
+                    <div className="grid md:col-span-2 lg:col-span-1 text-left grid-cols-2 lg:grid-cols-3 gap-4 md:gap-20 lg:gap-0">
                         <FooterColumn title="Quick Links">
                             <FooterLink>Our Story</FooterLink>
                             <FooterLink>Plans</FooterLink>
@@ -89,7 +89,7 @@ export default function Footer(): JSX.Element {
 
                         {/* Newsletter */}
                         <div className="mx-auto w-full max-w-sm md:max-w-none hidden lg:block">
-                            <h4 className="mb-4 text-lg font-semibold text-yellow-400">
+                            <h4 className="mb-4 text-lg font-semibold text-secondary">
                                 Newsletter
                             </h4>
 
@@ -100,10 +100,10 @@ export default function Footer(): JSX.Element {
                             <input
                                 type="email"
                                 placeholder="Your email"
-                                className="mb-3 w-full rounded-lg border border-white/10 bg-transparent px-4 py-3 text-sm text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none"
+                                className="mb-3 w-full rounded-lg border border-white/10 bg-transparent px-4 py-3 text-sm text-white placeholder-gray-500 focus:border-secondary focus:outline-none"
                             />
 
-                            <button className="w-full rounded-lg bg-gradient-to-r from-yellow-400 to-sky-500 py-3 text-sm font-semibold text-black hover:opacity-90">
+                            <button className="w-full rounded-lg bg-gradient-to-r from-secondary to-sky-500 py-3 text-sm font-semibold text-black hover:opacity-90">
                                 Subscribe
                             </button>
                         </div>
@@ -143,7 +143,7 @@ function FooterColumn({
 }) {
     return (
         <div className={className}>
-            <h4 className="mb-4 text-lg font-semibold text-yellow-400">
+            <h4 className="mb-4 text-lg font-semibold text-secondary">
                 {title}
             </h4>
             <ul className="space-y-3 text-sm text-gray-400">
@@ -167,7 +167,7 @@ function SocialIcon({ icon, style }: { icon: JSX.Element; style?: React.CSSPrope
     return (
         <a
             href="#"
-            className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-r from-yellow-400 to-sky-500 text-black transition hover:opacity-90"
+            className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-r from-secondary to-sky-500 text-black transition hover:opacity-90"
             style={style}
         >
             {icon}

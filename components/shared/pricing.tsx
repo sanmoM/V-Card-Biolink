@@ -130,7 +130,7 @@ function PricingCard({
 }: PricingCardProps): JSX.Element {
     return (
         <div
-            className={`relative flex flex-col rounded-2xl p-4 xl:p-8 ${highlighted
+            className={`relative flex flex-col rounded-2xl p-4 lg:p-8 ${highlighted
                 ? "border border-secondary shadow-[0_0_30px_0_#FFD70033]"
                 : "border border-white/10"
                 }`}
