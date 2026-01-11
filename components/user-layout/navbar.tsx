@@ -17,10 +17,10 @@ export default function Navbar() {
 
                 {/* Desktop Links */}
                 <ul className="hidden md:flex items-center gap-8 text-gray-300">
-                    <li className="hover:text-white cursor-pointer">Our Story</li>
-                    <li className="hover:text-white cursor-pointer">Plans</li>
-                    <li className="hover:text-white cursor-pointer">Services</li>
-                    <li className="hover:text-white cursor-pointer">FAQ</li>
+                    <Link className="hover:text-white cursor-pointer" href={"/our-story"}>Our Story</Link>
+                    <Link className="hover:text-white cursor-pointer" href={"/business-pricing"}>Plans</Link>
+                    <Link className="hover:text-white cursor-pointer" href={"#"}>Services</Link>
+                    <Link className="hover:text-white cursor-pointer" href={"/faqs"}>FAQ</Link>
                 </ul>
 
                 {/* Desktop Actions */}
@@ -48,12 +48,12 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {open && (
-                <div className="md:hidden bg-black border-t border-gray-800">
+                <div className="md:hidden bg-black border-t border-gray-800 absolute top-16 left-0 right-0">
                     <ul className="flex flex-col px-6 py-4 gap-4 text-sm text-gray-300">
-                        <li className="hover:text-white">Our Story</li>
-                        <li className="hover:text-white">Plans</li>
-                        <li className="hover:text-white">Services</li>
-                        <li className="hover:text-white">FAQ</li>
+                        <Link className="hover:text-white" href={"/our-story"}>Our Story</Link>
+                        <Link className="hover:text-white" href={"/business-pricing"}>Plans</Link>
+                        <Link className="hover:text-white" href={"#"}>Services</Link>
+                        <Link className="hover:text-white" href={"/faqs"}>FAQ</Link>
 
                         <div className="pt-4 border-t border-gray-800 flex flex-col gap-3">
                             <Link href={"/signin"} className="text-left text-gray-300 hover:text-white">

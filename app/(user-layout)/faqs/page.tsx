@@ -3,6 +3,8 @@
 import GradientText from "@/components/shared/headings/gradient-text";
 import MultiTextHeading from "@/components/shared/headings/multi-text-heading";
 import SubHeading from "@/components/shared/headings/sub-heading";
+import BlueCircle from "@/components/ui/background-images/blue-circle";
+import YellowCircle from "@/components/ui/background-images/yellow-circle";
 import PrimaryButton from "@/components/ui/buttons/primary-button";
 import { JSX, useState } from "react";
 import { HiChevronDown } from "react-icons/hi2";
@@ -88,7 +90,7 @@ export default function FaqPage(): JSX.Element {
     };
 
     return (
-        <section className="px-4 py-6 md:py-10 xl:py-20">
+        <section className="px-4 py-6 md:py-10 xl:py-20  w-full overflow-hidden">
             <div className="mx-auto mb-6 md:mb-10 xl:mb-16 max-w-3xl text-center">
                 <MultiTextHeading text1="Frequently Asked" text2="Questions" text2Style={{
                     backgroundImage: "linear-gradient(90deg, #FACC15 40%, #3B82F6 60%)"
@@ -97,7 +99,9 @@ export default function FaqPage(): JSX.Element {
             </div>
 
             {/* FAQ Content */}
-            <div className="mx-auto max-w-7xl space-y-6 md:space-y-8 xl:space-y-12">
+            <div className="mx-auto max-w-7xl space-y-6 md:space-y-8 xl:space-y-12 relative">
+                <YellowCircle className="absolute top-[0] -translate-y-[50%] left-0 -translate-x-[50%] opacity-[0.7] w-[50%]" />
+                <BlueCircle className="absolute bottom-[0] right-0 translate-x-[50%] opacity-[0.7] w-[50%]" />
                 {faqData.map((group, groupIndex) => (
                     <div key={groupIndex}>
 

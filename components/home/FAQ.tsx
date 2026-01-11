@@ -6,6 +6,8 @@ import SectionHeading from "../shared/headings/section-heading";
 import SubHeading from "../shared/headings/sub-heading";
 import SecondaryButton from "../ui/buttons/secondary-button";
 import Container from "../shared/container";
+import YellowCircle from "../ui/background-images/yellow-circle";
+import BlueCircle from "../ui/background-images/blue-circle";
 
 type FaqItem = {
     question: string;
@@ -78,7 +80,8 @@ export default function FAQ() {
                 </div>
 
                 {/* FAQ List */}
-                <div className="mx-auto max-w-3xl space-y-4">
+                <div className="mx-auto max-w-3xl space-y-4 relative">
+
                     {faqs.map((faq, index) => {
                         const isOpen = openIndex === index;
 
