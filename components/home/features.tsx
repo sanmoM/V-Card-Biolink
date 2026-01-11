@@ -5,8 +5,8 @@ import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { IoBarChartOutline, IoColorPaletteOutline, IoQrCodeOutline } from "react-icons/io5";
 import BlueCircle from "../ui/background-images/blue-circle";
 import Badge from "../ui/badge";
-import MultiTextHeading from "../shared/multi-text-heading";
-import SubHeading from "../shared/sub-heading";
+import MultiTextHeading from "../shared/headings/multi-text-heading";
+import SubHeading from "../shared/headings/sub-heading";
 import Container from "../shared/container";
 
 export default function Features() {

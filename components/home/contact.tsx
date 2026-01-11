@@ -2,8 +2,8 @@
 
 import { JSX } from "react";
 import { HiEnvelope, HiMapPin, HiPhone } from "react-icons/hi2";
-import MultiTextHeading from "../shared/multi-text-heading";
-import SubHeading from "../shared/sub-heading";
+import MultiTextHeading from "../shared/headings/multi-text-heading";
+import SubHeading from "../shared/headings/sub-heading";
 import YellowCircle from "../ui/background-images/yellow-circle";
 import PrimaryButton from "../ui/buttons/primary-button";
 import TextAreaInput from "../ui/inputs/text-area-input";

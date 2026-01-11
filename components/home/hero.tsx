@@ -1,9 +1,9 @@
-import SectionHeading from '@/components/shared/section-heading';
+import SectionHeading from '@/components/shared/headings/section-heading';
 import Logo from '@/components/shared/logo';
 import BlueCircle from '@/components/ui/background-images/blue-circle';
 import YellowCircle from '@/components/ui/background-images/yellow-circle';
 import { CgMouse } from 'react-icons/cg';
-import SubHeading from '../shared/sub-heading';
+import SubHeading from '../shared/headings/sub-heading';
 
 export default function Hero() {
     return (

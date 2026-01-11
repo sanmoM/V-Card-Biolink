@@ -1,8 +1,8 @@
 "use client";
 
-import MultiTextHeading from "@/components/shared/multi-text-heading";
-import SectionHeading from "@/components/shared/section-heading";
-import SubHeading from "@/components/shared/sub-heading";
+import MultiTextHeading from "@/components/shared/headings/multi-text-heading";
+import SectionHeading from "@/components/shared/headings/section-heading";
+import SubHeading from "@/components/shared/headings/sub-heading";
 import BlueCircle from "@/components/ui/background-images/blue-circle";
 import YellowCircle from "@/components/ui/background-images/yellow-circle";
 import { JSX } from "react";

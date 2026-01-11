@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { HiPlus, HiMinus } from "react-icons/hi2";
-import SectionHeading from "../shared/section-heading";
-import SubHeading from "../shared/sub-heading";
+import SectionHeading from "../shared/headings/section-heading";
+import SubHeading from "../shared/headings/sub-heading";
 import SecondaryButton from "../ui/buttons/secondary-button";
 import Container from "../shared/container";
 

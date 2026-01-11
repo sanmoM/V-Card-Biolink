@@ -1,10 +1,11 @@
 import { JSX } from "react";
 import { IoCheckmarkOutline } from "react-icons/io5";
-import MultiTextHeading from "../shared/multi-text-heading";
-import SubHeading from "../shared/sub-heading";
+import MultiTextHeading from "./headings/multi-text-heading";
+import SubHeading from "./headings/sub-heading";
 import Badge from "../ui/badge";
 import YellowCircle from "../ui/background-images/yellow-circle";
-import Container from "../shared/container";
+import Container from "./container";
+import { cn } from "@/utils/cn";
 
 type PricingCardProps = {
     title: string;
@@ -17,9 +18,9 @@ type PricingCardProps = {
     style?: React.CSSProperties;
 };
 
-export default function Pricing(): JSX.Element {
+export default function Pricing({ className }: { className?: string }) {
     return (
-        <div className="py-20 w-full overflow-hidden"
+        <div className={cn("py-20 w-full overflow-hidden", className)}
             style={{
                 backgroundImage: "linear-gradient(135deg, #111827 0%, #000000 50%, #111827 100%)"
             }}
@@ -27,7 +28,7 @@ export default function Pricing(): JSX.Element {
             {/* Header */}
             <Container>
                 <div className="mx-auto mb-10 xl:mb-16 max-w-4xl text-center relative">
-                    <YellowCircle className="top-1/2 -translate-y-[50%] left-[10%] z-10 blur-[100px]" />
+                    <YellowCircle className="top-1/2 -translate-y-[50%] left-0 z-10 opacity-[0.7]" />
                     <Badge>Pricing</Badge>
 
                     <MultiTextHeading text1="Elevate Your" text2="Digital Presence" text2Style={{
