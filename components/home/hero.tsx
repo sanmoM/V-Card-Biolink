@@ -27,17 +27,17 @@ export default function Hero() {
                 </SectionHeading>
 
                 {/* Tagline */}
-                <p className="mt-4 text-lg sm:text-xl 2xl:text-3xl text-gray-300">
+                <p className="mt-4 mb-4 md:mb-6 xl:mb-7 text-lg md:text-xl xl:text-2xl text-gray-300">
                     Where{" "}
                     <span className="text-secondary font-semibold">Innovation</span>{" "}
                     Meets{" "}
                     <span className="text-primary font-semibold">Excellence</span>
                 </p>
-                <SubHeading className='my-4 xl:my-8 2xl:my-10 md:w-[70%] mx-auto'>Transform your digital presence with cutting-edge solutions powered by next-generation technology</SubHeading>
+                <SubHeading className='mb-4 xl:mb-8 2xl:mb-10 md:w-[70%] mx-auto'>Transform your digital presence with cutting-edge solutions powered by next-generation technology</SubHeading>
 
                 {/* CTA Buttons */}
                 <div className="xl:mt-6 2xl:mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                    <button className="cursor-pointer px-8 py-2 xl:py-3 rounded-full bg-yellow-400 text-black font-semibold hover:opacity-90 transition">
+                    <button className="cursor-pointer px-8 py-2 xl:py-3 rounded-full bg-yellow-400 text-black font-semibold hover:opacity-90 transition shadow-[0px_0px_30px_0px_#FFD70099]">
                         Explore Products
                     </button>
                     <button className="cursor-pointer px-8 py-2 xl:py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-black transition">
@@ -53,8 +53,8 @@ export default function Hero() {
                 </div>
                 <CgMouse className='text-secondary text-4xl block mx-auto mt-8' />
             </div>
-            <YellowCircle className='z-20 top-[0%] xl:top-[0%] left-[45%] xl:left-[45%] -translate-x-[50%] w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[35%]' />
-            <BlueCircle className='z-20 top-0 md:bottom-[28%] xl:bottom-[15%] right-[20%] xl:right-[40%] 2xl:right-[45%] xl:translate-x-[50%] w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[35%]' />
+            <YellowCircle className='z-[-1] top-[0%] left-[45%] xl:left-[42%] -translate-x-[50%] w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[35%]' />
+            <BlueCircle className='z-[-1] top-0 md:top-auto md:bottom-[28%] xl:bottom-[20%] right-[13%] lg:right-[20%] xl:right-[40%] xl:translate-x-[50%] w-[50%] lg:w-[40%] xl:w-[40%] 2xl:w-[35%]' />
         </section>
     );
 }
@@ -81,7 +81,7 @@ function StatCard({
             >
                 {value}
             </div>
-            <p className="mt-2 text-sm 2xl:text-lg text-gray-400">{label}</p>
+            <p className="mt-2 text-sm text-gray-400 font-normal">{label}</p>
         </div>
     );
 }
