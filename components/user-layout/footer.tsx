@@ -14,13 +14,13 @@ import TextInput from "../ui/inputs/text-input";
 
 export default function Footer(): JSX.Element {
     return (
-        <footer className="px-4 pt-8 md:pt-12 xl:pt-20">
+        <footer className="pt-8 md:pt-12 xl:pt-20">
             <Container>
                 {/* Top Footer */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-[20%_67%] gap-10 md:gap-20 lg:gap-0 justify-between text-center md:text-left">
                     {/* Brand */}
                     <div className="mx-auto md:mx-0">
-                        <Logo className="w-20 mx-auto md:mx-0" />
+                        <Logo className="w-16 md:w-20 xl:w-24 mx-auto md:mx-0 mb-4" />
 
                         <p className="mb-6 text-sm leading-relaxed text-gray-400">
                             Empowering businesses with innovative solutions and exceptional service.
@@ -103,7 +103,7 @@ export default function Footer(): JSX.Element {
                                 placeholder="Your email"
                             />
 
-                            <button className="w-full rounded-lg bg-gradient-to-r from-secondary to-sky-500 py-3 text-sm font-semibold text-black hover:opacity-90">
+                            <button className="mt-4 w-full rounded-lg bg-gradient-to-r from-secondary to-sky-500 py-3 text-sm font-semibold text-black hover:opacity-90">
                                 Subscribe
                             </button>
                         </div>

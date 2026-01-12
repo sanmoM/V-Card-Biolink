@@ -75,7 +75,7 @@ const plans: Plan[] = [
 
 export default function BusinessFormationPage(): JSX.Element {
     return (
-        <section className="px-4 py-6 md:py-10 xl:py-20 w-full overflow-hidden">
+        <section className="px-4 md:px-6 py-8 md:py-12 xl:py-20 w-full overflow-hidden">
             {/* Header */}
             <div className="mx-auto mb-6 md:mb-10 xl:mb-16 max-w-3xl text-center relative">
                 <MultiTextHeading text1="Business" text2="Formation" text2Style={{

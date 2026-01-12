@@ -15,7 +15,7 @@ export default function Hero() {
             <div className="max-w-4xl w-full text-center bg-transparent">
 
                 {/* Logo */}
-                <Logo className="w-20 lg:w-28 2xl:w-38 mx-auto" />
+                <Logo className="w-20 md:w-24 xl:w-28 mx-auto" />
 
                 <SectionHeading
                     style={{

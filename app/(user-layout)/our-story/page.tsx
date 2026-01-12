@@ -16,7 +16,7 @@ import {
 
 export default function OurStoryPage(): JSX.Element {
     return (
-        <section className="px-4 py-6 md:py-10 xl:py-24">
+        <section className="px-4 py-8 md:py-12 xl:py-20 w-full overflow-hidden">
             {/* Header */}
             <div className="mx-auto mb-8 md:mb-10 xl:mb-16 max-w-3xl text-center">
                 <MultiTextHeading text1="Our" text2="Story" text2Style={{
@@ -26,7 +26,7 @@ export default function OurStoryPage(): JSX.Element {
             </div>
 
             {/* Content */}
-            <div className="mx-auto max-w-6xl space-y-10 relative z-[1]">
+            <div className="mx-auto max-w-6xl space-y-10 relative z-[1] lg:w-[90%] mx-auto">
                 <YellowCircle className="absolute top-[0] -translate-y-[50%] left-0 -translate-x-[50%] opacity-[0.7]" />
                 <BlueCircle className="absolute bottom-[0] translate-y-[50%] right-0 translate-x-[50%] opacity-[0.7]" />
                 {/* Card 1 */}
@@ -137,7 +137,7 @@ export default function OurStoryPage(): JSX.Element {
                 </StoryCard>
 
                 {/* Closing Card */}
-                <div className="rounded-2xl space-y-6 border border-yellow-400/30 p-4 lg:p-8 text-center shadow-[0_0_40px_0_#FFD70026]"> size={24}
+                <div className="rounded-2xl space-y-6 border border-yellow-400/30 p-4 lg:p-8 text-center shadow-[0_0_40px_0_#FFD70026]">
                     <SectionHeading
                         style={{
                             backgroundImage: "linear-gradient(90deg, #FACC15 30%, #3B82F6 70%)"

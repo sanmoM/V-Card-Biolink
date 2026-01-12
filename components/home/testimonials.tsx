@@ -94,7 +94,7 @@ export default function Testimonials(): JSX.Element {
                                     alt="Quote"
                                     width={500}
                                     height={500}
-                                    className="w-8 absolute top-0 -left-4"
+                                    className="w-8 absolute top-0 -left-2 md:-left-4"
                                 />
                                 {item.quote}
                             </p>

@@ -90,7 +90,7 @@ export default function FaqPage(): JSX.Element {
     };
 
     return (
-        <section className="px-4 py-6 md:py-10 xl:py-20  w-full overflow-hidden">
+        <section className="px-4 md:px-6 py-8 md:py-12 xl:py-20  w-full overflow-hidden">
             <div className="mx-auto mb-6 md:mb-10 xl:mb-16 max-w-3xl text-center">
                 <MultiTextHeading text1="Frequently Asked" text2="Questions" text2Style={{
                     backgroundImage: "linear-gradient(90deg, #FACC15 40%, #3B82F6 60%)"
@@ -99,7 +99,7 @@ export default function FaqPage(): JSX.Element {
             </div>
 
             {/* FAQ Content */}
-            <div className="mx-auto max-w-7xl space-y-6 md:space-y-8 xl:space-y-12 relative">
+            <div className="mx-auto max-w-7xl space-y-6 md:space-y-8 xl:space-y-12 relative lg:w-[90%] mx-auto">
                 <YellowCircle className="absolute top-[0] -translate-y-[50%] left-0 -translate-x-[50%] opacity-[0.7] w-[50%]" />
                 <BlueCircle className="absolute bottom-[0] right-0 translate-x-[50%] opacity-[0.7] w-[50%]" />
                 {faqData.map((group, groupIndex) => (
@@ -124,7 +124,7 @@ export default function FaqPage(): JSX.Element {
                                     >
                                         <button
                                             onClick={() => toggle(key)}
-                                            className="flex w-full cursor-pointer items-center justify-between p-4 md:p-6 text-left"
+                                            className="flex w-full cursor-pointer items-center justify-between p-4 md:p-6  text-left"
                                         >
                                             <span className="text-sm md:text-lg font-medium text-white">
                                                 {faq.question}
@@ -138,7 +138,7 @@ export default function FaqPage(): JSX.Element {
                                         </button>
 
                                         <div
-                                            className={`grid overflow-hidden px-6 transition-all duration-300 ${isOpen
+                                            className={`grid overflow-hidden px-4 md:px-6 transition-all duration-300 ${isOpen
                                                 ? "grid-rows-[1fr] pb-5"
                                                 : "grid-rows-[0fr]"
                                                 }`}
@@ -155,10 +155,10 @@ export default function FaqPage(): JSX.Element {
                 ))}
 
                 {/* CTA */}
-                <div className="rounded-2xl border border-secondary/30 p-10 text-center shadow-[0_0_40px_0_#FFD70026]">
+                <div className="rounded-2xl border border-secondary/30 p-4 md:p-6 xl:p-8 text-center shadow-[0_0_40px_0_#FFD70026]">
                     <MultiTextHeading text1="Still Have" text2="Questions?" text2Style={{
                         backgroundImage: "linear-gradient(90deg, #FACC15 40%, #3B82F6 60%)"
-                    }} className="text-xl md:text-2xl xl:text-3xl" />
+                    }} className="text-xl md:text-3xl xl:text-4xl" />
                     <SubHeading className="text-xs md:text-sm 2xl:text-base">Cannot find the answer you are looking for? Our support team is here
                         to help!</SubHeading>
                     <PrimaryButton className="text-black mt-6 w-fit px-8"

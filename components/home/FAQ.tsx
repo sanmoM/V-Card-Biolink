@@ -104,7 +104,7 @@ export default function FAQ() {
                                 </button>
 
                                 <div
-                                    className={`grid overflow-hidden px-6 transition-all duration-300 ${isOpen ? "grid-rows-[1fr] pb-5" : "grid-rows-[0fr]"
+                                    className={`grid overflow-hidden px-4 md:px-6 transition-all duration-300 ${isOpen ? "grid-rows-[1fr] pb-5" : "grid-rows-[0fr]"
                                         }`}
                                 >
                                     <div className="overflow-hidden text-gray-400">
