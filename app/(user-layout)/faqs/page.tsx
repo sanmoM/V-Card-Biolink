@@ -6,6 +6,7 @@ import SubHeading from "@/components/shared/headings/sub-heading";
 import BlueCircle from "@/components/ui/background-images/blue-circle";
 import YellowCircle from "@/components/ui/background-images/yellow-circle";
 import PrimaryButton from "@/components/ui/buttons/primary-button";
+import Link from "next/link";
 import { JSX, useState } from "react";
 import { HiChevronDown } from "react-icons/hi2";
 
@@ -90,7 +91,7 @@ export default function FaqPage(): JSX.Element {
     };
 
     return (
-        <section className="px-4 md:px-6 py-8 md:py-12 xl:py-20  w-full overflow-hidden">
+        <section className=" py-8 md:py-12 xl:py-20  w-full overflow-hidden">
             <div className="mx-auto mb-6 md:mb-10 xl:mb-16 max-w-3xl text-center">
                 <MultiTextHeading text1="Frequently Asked" text2="Questions" text2Style={{
                     backgroundImage: "linear-gradient(90deg, #FACC15 40%, #3B82F6 60%)"
@@ -99,7 +100,7 @@ export default function FaqPage(): JSX.Element {
             </div>
 
             {/* FAQ Content */}
-            <div className="mx-auto max-w-7xl space-y-6 md:space-y-8 xl:space-y-12 relative lg:w-[90%] mx-auto">
+            <div className="max-w-6xl space-y-6 md:space-y-8 xl:space-y-12 relative lg:w-[95%] mx-auto px-4 md:px-6 lg:px-0">
                 <YellowCircle className="absolute top-[0] -translate-y-[50%] left-0 -translate-x-[50%] opacity-[0.7] w-[50%]" />
                 <BlueCircle className="absolute bottom-[0] right-0 translate-x-[50%] opacity-[0.7] w-[50%]" />
                 {faqData.map((group, groupIndex) => (
@@ -159,15 +160,18 @@ export default function FaqPage(): JSX.Element {
                     <MultiTextHeading text1="Still Have" text2="Questions?" text2Style={{
                         backgroundImage: "linear-gradient(90deg, #FACC15 40%, #3B82F6 60%)"
                     }} className="text-xl md:text-3xl xl:text-4xl" />
-                    <SubHeading className="text-xs md:text-sm 2xl:text-base">Cannot find the answer you are looking for? Our support team is here
+                    <SubHeading className="text-xs md:text-base lg:text-xl xl:text-base">Cannot find the answer you are looking for? Our support team is here
                         to help!</SubHeading>
-                    <PrimaryButton className="text-black mt-6 w-fit px-8"
-                        style={{
-                            backgroundImage: "linear-gradient(90deg, #FACC15 0%, #3B82F6 100%)"
-                        }}
-                    >
-                        Contact Support
-                    </PrimaryButton>
+                    <Link href={"/contact-us"}>
+                        <PrimaryButton className="text-black mt-6 w-fit px-8"
+                            style={{
+                                backgroundImage: "linear-gradient(90deg, #FACC15 0%, #3B82F6 100%)"
+                            }}
+                        >
+                            Contact Support
+                        </PrimaryButton>
+                    </Link>
+
                 </div>
             </div>
         </section>

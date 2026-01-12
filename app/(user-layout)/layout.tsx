@@ -8,7 +8,9 @@ export default function layout({ children }: { children: React.ReactNode }) {
             <div className="sticky top-0 z-[100] bg-black">
                 <Navbar />
             </div>
-            {children}
+            <div className=''>
+                {children}
+            </div>
             <Footer />
         </>
     )

@@ -7,17 +7,17 @@ import { JSX } from "react";
 
 export default function TermsAndConditions(): JSX.Element {
     return (
-        <section className="px-4 py-6 md:py-10 xl:py-20">
+        <section className="py-8 md:py-12 xl:py-20 w-full px-4 md:px-6 lg:px-0 overflow-x-clip">
             {/* Header */}
             <div className="mx-auto mb-6 md:mb-8 xl:mb-10 max-w-7xl text-center">
                 <MultiTextHeading text1="Terms and " text2="Conditions" text2Style={{
                     backgroundImage: "linear-gradient(90deg, #FFD700 0%, #0080FF 100%)"
-                }} className="text-4xl" />
+                }} className="text-3xl md:text-4xl" />
                 <SubHeading>Last updated: January 2024</SubHeading>
             </div>
 
             {/* Content Card */}
-            <div className="mx-auto max-w-7xl rounded-2xl border border-secondary/30 p-8 shadow-[0_0_50px_0_#FFD70026] relative">
+            <div className="max-w-6xl space-y-10 relative z-[1] rounded-2xl border border-secondary/30 p-4 md:p-6 xl:p-8 shadow-[0_0_50px_0_#FFD70026]  lg:w-[95%] mx-auto ">
                 <YellowCircle className="absolute top-[0] -translate-y-[50%] left-0 -translate-x-[50%] opacity-[0.7]" />
                 <BlueCircle className="absolute bottom-[0] translate-y-[50%] right-0 translate-x-[50%] opacity-[0.7]" />
                 <p className="mb-6 text-lg leading-relaxed text-gray-300">
@@ -189,7 +189,7 @@ export default function TermsAndConditions(): JSX.Element {
                 </TermsSection>
 
                 {/* Acknowledgement */}
-                <div className="mt-8 rounded-xl bg-secondary/10 p-4 text-center text-xl text-gray-200">
+                <div className="mt-8 rounded-xl bg-secondary/10 p-4 text-center md:text-lg xl:text-xl text-gray-200">
                     By using our services, you acknowledge that you have read, understood,
                     and agree to be bound by these Terms and Conditions.
                 </div>

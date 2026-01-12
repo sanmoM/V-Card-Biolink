@@ -16,18 +16,20 @@ import {
 
 export default function SupportCenterPage(): JSX.Element {
     return (
-        <section className="px-4 py-6 md:py-10 xl:py-20">
+        <section className="py-6 md:py-10 xl:py-20 w-full overflow-x-clip px-4 md:px-6 lg:px-0">
             {/* Header */}
             <div className="mx-auto mb-6 md:mb-10 xl:mb-16 max-w-3xl text-center">
                 <MultiTextHeading text1="Support " text2="Center" text2Style={{
                     backgroundImage: "linear-gradient(90deg, #FACC15 40%, #3B82F6 60%)"
                 }} />
-                <SubHeading>We are here to help! Send us a message and our team will get back to you
+                <SubHeading
+                className="w-[95%] mx-auto"
+                >We are here to help! Send us a message and our team will get back to you
                     as soon as possible</SubHeading>
             </div>
 
             {/* Content */}
-            <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-2 relative">
+            <div className="grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-2 relative lg:w-[95%] mx-auto">
                 <YellowCircle className="absolute top-[0] -translate-y-[50%] left-0 -translate-x-[50%] opacity-[0.7]" />
                 <BlueCircle className="absolute bottom-[0] translate-y-[50%] right-0 translate-x-[50%] opacity-[0.7]" />
                 {/* LEFT */}

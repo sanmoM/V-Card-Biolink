@@ -16,7 +16,7 @@ import {
 
 export default function OurStoryPage(): JSX.Element {
     return (
-        <section className="px-4 py-8 md:py-12 xl:py-20 w-full overflow-hidden">
+        <section className="py-8 md:py-12 xl:py-20 w-full overflow-hidden">
             {/* Header */}
             <div className="mx-auto mb-8 md:mb-10 xl:mb-16 max-w-3xl text-center">
                 <MultiTextHeading text1="Our" text2="Story" text2Style={{
@@ -26,7 +26,7 @@ export default function OurStoryPage(): JSX.Element {
             </div>
 
             {/* Content */}
-            <div className="mx-auto max-w-6xl space-y-10 relative z-[1] lg:w-[90%] mx-auto">
+            <div className="mx-auto max-w-6xl space-y-10 relative z-[1] lg:w-[90%] mx-auto  px-4 md:px-6 lg:px-0">
                 <YellowCircle className="absolute top-[0] -translate-y-[50%] left-0 -translate-x-[50%] opacity-[0.7]" />
                 <BlueCircle className="absolute bottom-[0] translate-y-[50%] right-0 translate-x-[50%] opacity-[0.7]" />
                 {/* Card 1 */}
