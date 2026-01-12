@@ -26,7 +26,7 @@ export default function OurStoryPage(): JSX.Element {
             </div>
 
             {/* Content */}
-            <div className="mx-auto max-w-6xl space-y-10 relative z-[1] lg:w-[90%] mx-auto  px-4 md:px-6 lg:px-0">
+            <div className="mx-auto max-w-6xl space-y-6 md:space-y-8 xl:space-y-10 relative z-[1] lg:w-[90%]  px-4 md:px-6 lg:px-0">
                 <YellowCircle className="absolute top-[0] -translate-y-[50%] left-0 -translate-x-[50%] opacity-[0.7]" />
                 <BlueCircle className="absolute bottom-[0] translate-y-[50%] right-0 translate-x-[50%] opacity-[0.7]" />
                 {/* Card 1 */}
@@ -142,7 +142,7 @@ export default function OurStoryPage(): JSX.Element {
                         style={{
                             backgroundImage: "linear-gradient(90deg, #FACC15 30%, #3B82F6 70%)"
                         }}
-                        className="text-3xl md:text-xl"
+                        className="text-3xl md:text-xl mb-4"
                     >
                         Welcome to Madwess
                     </SectionHeading>
@@ -179,7 +179,7 @@ function StoryCard({
     return (
         <div className={`rounded-2xl border p-6 lg:p-8 ${accentStyles}`}>
             <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-current"
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-current shrink-0"
                     style={styles}
                 >
                     {icon}

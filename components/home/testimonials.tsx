@@ -111,7 +111,8 @@ export default function Testimonials(): JSX.Element {
 
                             {/* Author */}
                             <div className="flex items-center gap-4">
-                                <div className="h-12 w-12 rounded-full border border-yellow-400/50" />
+                                {/* <div className="h-12 w-12 rounded-full border border-yellow-400/50" /> */}
+                                <img src={"https://png.pngtree.com/png-clipart/20250105/original/pngtree-professional-man-standing-confidently-png-image_18805914.png"} alt="Author" className="h-12 w-12 rounded-full border border-yellow-400/50 object-contain" />
 
                                 <div>
                                     <p className=" font-semibold text-white">
@@ -131,7 +132,7 @@ export default function Testimonials(): JSX.Element {
             <div className="mt-4 md:mt-6 xl:mt-10 flex items-center justify-center gap-6">
                 <button
                     onClick={prevSlide}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-yellow-400/40 text-yellow-400 hover:bg-yellow-400/10"
+                    className="flex cursor-pointer h-10 w-10 items-center justify-center rounded-full border border-yellow-400/40 text-yellow-400 hover:bg-yellow-400/10"
                 >
                     <HiArrowSmallLeft size={18} />
                 </button>
@@ -152,7 +153,7 @@ export default function Testimonials(): JSX.Element {
 
                 <button
                     onClick={nextSlide}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-yellow-400/40 text-yellow-400 hover:bg-yellow-400/10"
+                    className="flex cursor-pointer h-10 w-10 items-center justify-center rounded-full border border-yellow-400/40 text-yellow-400 hover:bg-yellow-400/10"
                 >
                     <HiArrowSmallLeft size={18} className="rotate-180" />
                 </button>

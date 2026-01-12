@@ -1,5 +1,4 @@
 import Pricing from '@/components/shared/pricing'
-import React from 'react'
 
 export default function page() {
     return (

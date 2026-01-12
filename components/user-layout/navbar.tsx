@@ -6,6 +6,9 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Logo from "../shared/logo";
 import SecondaryButton from "../ui/buttons/secondary-button";
+import { IoCloseSharp } from "react-icons/io5";
+import { IoMenu } from "react-icons/io5";
+
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -46,11 +49,9 @@ export default function Navbar() {
                     onClick={() => setOpen(!open)}
                     className="md:hidden focus:outline-none"
                 >
-                    <div className="space-y-1">
-                        <span className="block w-6 h-0.5 bg-white" />
-                        <span className="block w-6 h-0.5 bg-white" />
-                        <span className="block w-6 h-0.5 bg-white" />
-                    </div>
+                    {
+                        open ? (<IoCloseSharp size={40} />) :  (<IoMenu size={40} />) 
+                    }
                 </button>
             </div>
 
