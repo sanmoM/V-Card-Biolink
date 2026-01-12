@@ -11,6 +11,8 @@ import Container from "../shared/container";
 import Logo from "../shared/logo";
 import { cn } from "@/utils/cn";
 import TextInput from "../ui/inputs/text-input";
+import Link from "next/link";
+import GradientText from "../shared/headings/gradient-text";
 
 export default function Footer(): JSX.Element {
     return (
@@ -51,9 +53,14 @@ export default function Footer(): JSX.Element {
                     </div>
 
                     <div className="mx-auto w-full max-w-sm md:max-w-none lg:hidden">
-                        <h4 className="mb-4 text-lg font-semibold text-secondary">
+                        <GradientText
+                            style={{
+                                backgroundImage: "linear-gradient(90deg, #FACC15 0%, #3B82F6 100%)"
+                            }}
+                            className="text-lg md:text-xl font-extrabold w-fit mb-4"
+                        >
                             Newsletter
-                        </h4>
+                        </GradientText>
 
                         <p className="mb-4 text-sm text-gray-400">
                             Subscribe to get the latest updates and offers.
@@ -62,7 +69,7 @@ export default function Footer(): JSX.Element {
                         <TextInput
                             label="Email"
                             placeholder="Your email"
-                            
+
                         />
 
                         <button className="w-full mt-4 rounded-lg bg-gradient-to-r from-secondary to-sky-500 py-3 text-sm font-semibold text-black hover:opacity-90">
@@ -73,26 +80,31 @@ export default function Footer(): JSX.Element {
                     {/* Quick Links */}
                     <div className="grid md:col-span-2 lg:col-span-1 text-left grid-cols-2 lg:grid-cols-3 gap-4 md:gap-20 lg:gap-0">
                         <FooterColumn title="Quick Links">
-                            <FooterLink>Our Story</FooterLink>
-                            <FooterLink>Plans</FooterLink>
-                            <FooterLink>Services</FooterLink>
-                            <FooterLink>FAQ</FooterLink>
-                            <FooterLink>Features</FooterLink>
+                            <FooterLink link="/our-story">Our Story</FooterLink>
+                            <FooterLink link="/business-pricing">Plans</FooterLink>
+                            <FooterLink link="/#services">Services</FooterLink>
+                            <FooterLink link="/faqs">FAQ</FooterLink>
+                            <FooterLink link="/#features">Features</FooterLink>
                         </FooterColumn>
 
                         {/* Legal */}
                         <FooterColumn title="Legal">
-                            <FooterLink>Terms and Conditions</FooterLink>
-                            <FooterLink>Privacy and Return Policy</FooterLink>
-                            <FooterLink>Support</FooterLink>
-                            <FooterLink>Contact Us</FooterLink>
+                            <FooterLink link="/terms-and-conditions">Terms and Conditions</FooterLink>
+                            <FooterLink link="/terms-and-conditions">Privacy and Return Policy</FooterLink>
+                            <FooterLink link="/contact-us">Support</FooterLink>
+                            <FooterLink link="/contact-us">Contact Us</FooterLink>
                         </FooterColumn>
 
                         {/* Newsletter */}
                         <div className="mx-auto w-full max-w-sm md:max-w-none hidden lg:block">
-                            <h4 className="mb-4 text-lg font-semibold text-secondary">
+                            <GradientText
+                                style={{
+                                    backgroundImage: "linear-gradient(90deg, #FACC15 0%, #3B82F6 100%)"
+                                }}
+                                className="text-lg md:text-xl font-extrabold w-fit mb-4"
+                            >
                                 Newsletter
-                            </h4>
+                            </GradientText>
 
                             <p className="mb-4 text-sm text-gray-400">
                                 Subscribe to get the latest updates and offers.
@@ -143,9 +155,17 @@ function FooterColumn({
 }) {
     return (
         <div className={className}>
-            <h4 className="mb-4 text-lg font-semibold text-secondary">
+            {/* <h4 className="mb-4 text-lg font-semibold text-secondary">
                 {title}
-            </h4>
+            </h4> */}
+            <GradientText
+                style={{
+                    backgroundImage: "linear-gradient(90deg, #FACC15 0%, #3B82F6 100%)"
+                }}
+                className="text-lg md:text-xl font-extrabold w-fit mb-4"
+            >
+                {title}
+            </GradientText>
             <ul className="space-y-3 text-sm text-gray-400">
                 {children}
             </ul>
@@ -153,12 +173,12 @@ function FooterColumn({
     );
 }
 
-function FooterLink({ children }: { children: React.ReactNode }) {
+function FooterLink({ children, link }: { children: React.ReactNode, link?: string }) {
     return (
         <li>
-            <a href="#" className="transition hover:text-white">
+            <Link href={link || "#"} className="transition hover:text-white">
                 {children}
-            </a>
+            </Link>
         </li>
     );
 }
