@@ -32,13 +32,13 @@ export default function Features() {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className={cn("rounded-xl p-8", feature.containerClassName)}
+                            className={cn("rounded-xl p-4 md:p-6 xl:p-8", feature.containerClassName)}
                         >
-                            <div className={cn("mb-5 flex h-14 w-14  backdrop-blur-3xl  items-center justify-center rounded-lg text-yellow-400", feature.iconClassName)}>
-                                <feature.icon size={28} />
+                            <div className={cn("mb-5 flex w-8 h-8 md:h-10 md:w-10 xl:h-14 xl:w-14  backdrop-blur-3xl  items-center justify-center rounded-lg text-yellow-400", feature.iconClassName)}>
+                                <feature.icon size={28} className="w-5 h-5 md:w-7 md:h-7 xl:w-10 xl:h-10" />
                             </div>
 
-                            <h3 className="mb-2 text-2xl font-semibold text-white">
+                            <h3 className="mb-2 text-lg md:text-xl xl:text-2xl font-semibold text-white">
                                 {feature.title}
                             </h3>
 

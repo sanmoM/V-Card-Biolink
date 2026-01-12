@@ -10,10 +10,11 @@ import {
 import Container from "../shared/container";
 import Logo from "../shared/logo";
 import { cn } from "@/utils/cn";
+import TextInput from "../ui/inputs/text-input";
 
 export default function Footer(): JSX.Element {
     return (
-        <footer className="px-4 pt-20">
+        <footer className="px-4 pt-8 md:pt-12 xl:pt-20">
             <Container>
                 {/* Top Footer */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-[20%_67%] gap-10 md:gap-20 lg:gap-0 justify-between text-center md:text-left">
@@ -58,13 +59,13 @@ export default function Footer(): JSX.Element {
                             Subscribe to get the latest updates and offers.
                         </p>
 
-                        <input
-                            type="email"
+                        <TextInput
+                            label="Email"
                             placeholder="Your email"
-                            className="mb-3 w-full rounded-lg border border-white/10 bg-transparent px-4 py-3 text-sm text-white placeholder-gray-500 focus:border-secondary focus:outline-none"
+                            
                         />
 
-                        <button className="w-full rounded-lg bg-gradient-to-r from-secondary to-sky-500 py-3 text-sm font-semibold text-black hover:opacity-90">
+                        <button className="w-full mt-4 rounded-lg bg-gradient-to-r from-secondary to-sky-500 py-3 text-sm font-semibold text-black hover:opacity-90">
                             Subscribe
                         </button>
                     </div>
@@ -97,10 +98,9 @@ export default function Footer(): JSX.Element {
                                 Subscribe to get the latest updates and offers.
                             </p>
 
-                            <input
-                                type="email"
+                            <TextInput
+                                label="Email"
                                 placeholder="Your email"
-                                className="mb-3 w-full rounded-lg border border-white/10 bg-transparent px-4 py-3 text-sm text-white placeholder-gray-500 focus:border-secondary focus:outline-none"
                             />
 
                             <button className="w-full rounded-lg bg-gradient-to-r from-secondary to-sky-500 py-3 text-sm font-semibold text-black hover:opacity-90">

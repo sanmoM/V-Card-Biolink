@@ -12,7 +12,7 @@ import Container from "../shared/container";
 
 export default function Contact(): JSX.Element {
     return (
-        <section className="my-12 md:py-16 xl:py-20 relative">
+        <section className="py-12 md:py-16 xl:py-20 relative">
             <Container>
                 <YellowCircle className="absolute top-[60%] -translate-y-[50%] left-1/2 -translate-x-[50%] z-[-1] opacity-[0.5] w-[70%]" />
                 {/* Header */}
@@ -24,7 +24,7 @@ export default function Contact(): JSX.Element {
                 </div>
 
                 {/* Content */}
-                <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-2">
+                <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:gap-6 xl:gap-10 lg:grid-cols-2">
                     {/* Left Info Cards */}
                     <div className="space-y-6">
                         <InfoCard
@@ -55,7 +55,7 @@ export default function Contact(): JSX.Element {
                     </div>
 
                     {/* Form */}
-                    <form className="rounded-2xl border border-yellow-400/20 p-8 bg-[#00000066]">
+                    <form className="rounded-2xl border border-yellow-400/20 p-4 md:p-6 xl:p-8 bg-[#00000066]">
                         <div className="space-y-5">
                             <TextInput label="Name" placeholder="" />
                             <TextInput label="Email" placeholder="" />
@@ -100,7 +100,7 @@ function InfoCard({
             : "border-primary/30 ";
 
     return (
-        <div className={`flex items-center gap-4 rounded-xl border p-6 bg-[#00000066] ${accentStyles}`}>
+        <div className={`flex items-center gap-4 rounded-xl border p-4 md:p-6 bg-[#00000066] ${accentStyles}`}>
             <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-current text-black"
                 style={style}
             >

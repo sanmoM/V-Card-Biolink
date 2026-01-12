@@ -7,7 +7,7 @@ import SubHeading from '../shared/headings/sub-heading';
 
 export default function Hero() {
     return (
-        <section className="xl:h-[calc(100vh-89px)] text-white flex items-center justify-center px-6 relative z-[1] bg-transparent w-full py-10 xl:py-0"
+        <section className="xl:h-[calc(100vh-89px)] text-white flex items-center justify-center px-4 md:px-6 relative z-[1] bg-transparent w-full py-10 xl:py-0"
             style={{
                 backgroundImage: "linear-gradient(135deg, #111827 0%, #000000 50%, #111827 100%)"
             }}

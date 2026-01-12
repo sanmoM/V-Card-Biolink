@@ -20,14 +20,14 @@ type PricingCardProps = {
 
 export default function Pricing({ className }: { className?: string }) {
     return (
-        <div className={cn("py-20 w-full overflow-hidden", className)}
+        <div className={cn("py-8 md:py-12 xl:py-20 w-full overflow-hidden", className)}
             style={{
                 backgroundImage: "linear-gradient(135deg, #111827 0%, #000000 50%, #111827 100%)"
             }}
         >
             {/* Header */}
             <Container>
-                <div className="mx-auto mb-10 xl:mb-16 max-w-4xl text-center relative">
+                <div className="mx-auto mb-6 md:mb-10 xl:mb-16 max-w-4xl text-center relative">
                     <YellowCircle className="top-1/2 -translate-y-[50%] left-0 z-10 opacity-[0.7]" />
                     <Badge>Pricing</Badge>
 
@@ -37,7 +37,7 @@ export default function Pricing({ className }: { className?: string }) {
                     <SubHeading>Our bio link is designed to grow with you. Whether you're taking your first step, building a brand, or scaling a company, we have a plan crafted to power your success.</SubHeading>
 
                     {/* Toggle */}
-                    <div className="mt-8 flex items-center justify-center gap-3 text-sm text-gray-400">
+                    <div className="mt-4 md:mt-6 xl:mt-8 flex items-center justify-center gap-3 text-sm text-gray-400">
                         <span>Monthly</span>
                         <div className="flex h-6 w-12 items-center rounded-full bg-gray-700 px-1">
                             <div className="h-4 w-4 rounded-full bg-yellow-400" />

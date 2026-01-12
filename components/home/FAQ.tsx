@@ -65,7 +65,7 @@ export default function FAQ() {
     };
 
     return (
-        <section className="md:py-10 xl:py-20"
+        <section className="py-8 md:py-12 xl:py-20"
             style={{
                 backgroundImage: "linear-gradient(0deg, #000000 0%, #111827 50%, #000000 100%)"
             }}
@@ -92,7 +92,7 @@ export default function FAQ() {
                             >
                                 <button
                                     onClick={() => toggle(index)}
-                                    className="flex w-full items-center justify-between px-6 py-5 text-left  cursor-pointer"
+                                    className="flex w-full items-center justify-between p-4 md:p-6 text-left  cursor-pointer"
                                 >
                                     <span className="text-sm md:text-lg font-medium text-white">
                                         {faq.question}

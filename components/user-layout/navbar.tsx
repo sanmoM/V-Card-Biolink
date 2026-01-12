@@ -17,7 +17,7 @@ export default function Navbar() {
         );
 
     return (
-        <nav className="w-full bg-black text-white px-4 md:px-6 lg:px-0 lg:w-[95%] max-w-[1600px] mx-auto">
+        <nav className="w-full bg-black text-white px-3 md:px-5 lg:px-0 lg:w-[95%] max-w-[1600px] mx-auto">
             <div className="py-3 flex items-center justify-between">
 
                 {/* Logo */}

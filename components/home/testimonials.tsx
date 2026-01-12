@@ -57,7 +57,7 @@ export default function Testimonials(): JSX.Element {
     };
 
     return (
-        <Container className="py-20 relative">
+        <Container className="py-8 md:py-12 xl:py-20 relative">
             <YellowCircle className="absolute top-[60%] -translate-y-[50%] left-1/2 -translate-x-[50%] z-[-1] blur-[100px] w-[40%]" />
             {/* Header */}
             <div className="mx-auto mb-4 md:mb-8 xl:mb-14 max-w-3xl text-center">
@@ -83,7 +83,7 @@ export default function Testimonials(): JSX.Element {
                     {testimonials.map((item, index) => (
                         <div
                             key={index}
-                            className="w-full flex-shrink-0 rounded-2xl border border-yellow-400/30 p-6 xl:p-10 shadow-[0_0_40px_0_#FFD70026] bg-blend-overlay"
+                            className="w-full flex-shrink-0 rounded-2xl border border-yellow-400/30 p-4 md:p-6 xl:p-10 shadow-[0_0_40px_0_#FFD70026] bg-blend-overlay"
                             style={{
                                 backgroundImage: "linear-gradient(135deg, rgba(31, 41, 55, 0.6) 0%, rgba(17, 24, 39, 0.6) 100%)"
                             }}

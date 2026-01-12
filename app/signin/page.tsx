@@ -12,7 +12,7 @@ import Checkbox from "@/components/ui/inputs/checkbox";
 
 export default function CreateAccountCard() {
     return (
-        <div className="relative rounded-2xl p-0.5 bg-gradient-primary shadow-glow py-20 2xl:h-screen flex justify-center items-center w-full overflow-hidden poppins">
+        <div className="relative rounded-2xl p-0.5 bg-gradient-primary shadow-glow py-8 md:py-12 xl:py-20 md:h-screen flex justify-center items-center w-full overflow-hidden poppins">
             <div className="
   w-[90%] sm:w-[23%]
   sm:min-w-[400px]
