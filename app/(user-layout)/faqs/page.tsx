@@ -125,7 +125,7 @@ export default function FaqPage(): JSX.Element {
                                     >
                                         <button
                                             onClick={() => toggle(key)}
-                                            className="flex w-full cursor-pointer items-center justify-between p-4 md:p-6  text-left"
+                                            className="flex w-full cursor-pointer items-center justify-between p-4 md:px-6  text-left"
                                         >
                                             <span className="text-sm md:text-lg font-medium text-white">
                                                 {faq.question}
